@@ -1,0 +1,32 @@
+=clearfix
+	&:after,
+	&:before
+		content: ""
+		display: table
+	&:after
+		clear: both
+	&
+		*zoom: 1
+
+.clearfix
+	+clearfix
+
+a
+	-webkit-touch-callout: none
+
+=noselect
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+// Transitions
+=layout-animation
+	+transition(all 0.2s ease-out)
+
+=link-animation
+	+transition(opacity 0.2s ease-out)
+	&:hover
+		opacity: 0.7

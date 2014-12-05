@@ -1,0 +1,215 @@
+.b-freebook
+	text-align: center
+	margin-top: 65px
+
+.b-subheading--freebook
+	margin-bottom: 35px
+
+.b-note
+	font-size: 16px
+	color: #7f8c8d
+	line-height: 160%
+	max-width: 750px
+	width: 90%
+	margin: 0 auto
+	margin-bottom: 60px
+	text-align: left
+
+	i
+		font-style: italic
+
+.b-freebook__steps
+	border: 5px solid #ebf3f5
+	background-color: #fff
+	margin: 0 auto
+	width: 90%
+	margin-bottom: 130px
+	max-width: 930px
+.b-freebook__steps__content
+	padding-top: 45px
+	//padding-bottom: 45px
+
+	padding-left: 110px
+	padding-right: 110px
+
+.b-freebook__steps__items
+	text-align: left
+.b-freebook__steps__item
+	+clearfix
+	padding-bottom: 40px
+	background: url(/etc/landing_pages/i/freebook-list-divider-big.png) 27px 0 repeat-y
+	&:first-child
+		.b-freebook__steps__item__wrap
+			padding-top: 0
+	&:last-child
+		background: none
+
+.b-freebook__steps__item__number__wrap
+	float: left
+	width: 58px
+	margin-right: 52px
+	height: 62px
+	padding-top: 4px
+	width: 58px
+	background: #fff
+	margin-left: -100%
+.b-freebook__steps__item__number
+	width: 58px
+	height: 58px
+	background-color: #ebf3f5
+	border-radius: 100px
+	text-align: center
+	line-height: 57px
+	font-size: 36px
+	color: #fff
+	font-weight: 600
+.b-freebook__steps__item__text__wrap
+	float: left
+	width: 100%
+.b-freebook__steps__item__text
+	margin-left: 110px
+	color: #7f8c8d
+	line-height: 130%
+	padding-top: 12px
+	font-size: 14px
+	a
+		color: #9d228b
+		//+tr(all 0.3s ease-in-out)
+		//&:hover
+		//	opacity: 0.5
+.b-freebook__steps__item__text__heading
+	font-size: 16px
+	font-weight: 600
+	margin-bottom: 6px
+	line-height: 100%
+
+.b-freebook__steps__button
+	background: #fff
+	position: relative
+	bottom: -0px
+	margin-bottom: -35px
+	font-size: 16px
+	color: #9e268d
+	span
+		border-bottom: 1px dotted
+	&:hover
+		background: #fff
+
+.b-freebook__styles
+	background: #ebf3f6
+	text-align: center
+	padding-bottom: 140px
+	margin-bottom: -50px
+	padding-top: 60px
+
+.b-freebook__styles__items__wrap
+	text-align: center
+
+.b-freebook__styles__wrap
+	max-width: 1050px
+	margin-left: auto
+	margin-right: auto
+
+.b-freebook__rules
+	display: none
+	text-align: center
+	padding-bottom: 100px
+	width: 90%
+	margin-left: auto
+	margin-right: auto
+	line-height: 160%
+	font-size: 14px
+	font-style: italic
+	color: #7f8c8d
+	margin-top: -40px
+
+.b-freebook__styles__item
+	display: inline-block
+	overflow: hidden
+	@include border-radius(5px)
+	min-height: 450px
+	width: 450px
+	position: relative
+	margin: 15px
+	line-height: 0
+	font-size: 0
+
+.b-freebook__styles__item__picture
+	width: 100%
+	height: 299px
+	background: #fff
+
+.b-freebook__styles__item__content
+	padding-top: 35px
+	padding-bottom: 35px
+	background: #fff
+	width: 100%
+	line-height: 160%
+
+	font-size: 14px
+	color: #7f8c8d
+	.b-heading
+		font-size: 24px
+		margin-bottom: 20px
+
+
+@media only screen and (max-width: 980px)
+	.b-heading
+		width: 100%
+
+	.b-freebook
+		margin-top: 32px
+
+	.b-subheading--freebook
+		margin-bottom: 10px
+
+	.b-note
+		margin-bottom: 25px
+		font-size: 14px
+
+	.b-freebook__steps__content
+		padding: 22px
+
+	.b-button.b-freebook__steps__button
+		font-size: 14px
+		margin-bottom: -60px
+
+	.b-freebook__steps__item__number
+		width: 30px
+		height: 30px
+		font-size: 18px
+		line-height: 30px
+	.b-freebook__steps__item__text
+		margin-left: 56px
+
+	.b-freebook__steps__item__number__wrap
+		height: 34px
+		padding-top: 4px
+		width: 40px
+
+	.b-freebook__steps__item
+		+clearfix
+		padding-bottom: 40px
+		background: url(/etc/landing_pages/i/freebook-list-divider-small.png) 14px 0 repeat-y
+
+	.b-freebook__steps
+		margin-bottom: 90px
+
+@media only screen and (max-width: 480px)
+	.b-freebook__styles
+		padding-top: 30px
+		.b-subheading--freebook
+			font-size: 16px
+			margin-bottom: 25px
+	.b-freebook__styles
+		padding-top: 10px
+	.b-freebook__styles__item
+		width: 90%
+		margin: 0
+		margin-bottom: 15px
+	.b-freebook__styles__item
+		p
+			font-size: 14px
+			width: 90%
+			margin-left: auto
+			margin-right: auto

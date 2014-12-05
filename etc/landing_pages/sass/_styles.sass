@@ -1,0 +1,751 @@
+textarea:focus, input:focus
+	outline: 0
+
+body, html
+	width: 100%
+	height: 100%
+
+	font-family: "OpenSans"
+	font-weight: 100
+
+	min-width: 320px
+
+	&.no-overflow
+		overflow: hidden
+
+.ajax
+	text-decoration: none
+	color: #9d228b
+	border-bottom: 1px dashed #9d228b
+
+.b-icon
+	font-family: "entypo"
+	font-weight: 400
+
+// Layout
+.l-page
+	width: 100%
+	padding-top: 40px
+
+.l-content
+	width: 950px
+	margin: 0 auto
+	+layout-animation
+
+// Common
+.b-button
+	//width: 292px
+	padding-left: 80px
+	padding-right: 80px
+	height: 64px
+	text-align: center
+	vertical-align: middle
+	line-height: 64px
+	font-size: 30px
+	text-decoration: none
+	color: #fff
+	background: #39b54a
+	display: inline-block
+	+border-radius(6px)
+	box-shadow: 0 3px 0 #2b963a
+	+transition(all 0.2s ease-out)
+	font-weight: 100
+	position: relative
+	&:hover
+		background: #44d258
+.b-button--flat
+	box-shadow: none
+
+// Columns
+.b-columns
+	width: 100%
+	+clearfix
+.b-column
+	float: left
+
+.b-column--50
+	width: 50%
+.b-column--25
+	width: 25%
+.b-column--25--padded
+	width: 20%
+	padding-right: 5%
+.b-column--30
+	width: 30%
+
+// Blocks
+.b-heading
+	color: #9d228b
+	font-size: 45px
+	font-weight: 100
+	margin-bottom: 20px
+	line-height: 120%
+.b-subheading
+	color: #7f8c8d
+	font-size: 18px
+	line-height: 160%
+	width: 515px
+	margin: 0 auto
+	font-weight: 100
+.b-subheading--descriptor
+	span
+		color: #9d228b
+		font-weight: 600
+
+.b-header
+	position: fixed
+	height: 40px
+	z-index: 100
+	background: #fff
+	width: 100%
+	left: 0
+	top: 0
+	@include box-shadow(2px 4px 4px rgba(0,0,0,.2))
+
+.b-jumbotron
+	height: 685px + 50px
+	width: 100%
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-image: url(/etc/landing_pages/i/temp/jumbotron.jpg)
+	background-color: #d1d2d4
+
+	text-align: center
+	//padding-top: 50px
+
+	position: relative
+.b-jumbotron__header
+	background-color: rgba(255,255,255,.9)
+	padding-top: 20px
+	padding-bottom: 20px
+.b-follow
+	position: absolute
+	bottom: 30px
+	left: 50%
+	margin-left: -25px
+
+	width: 50px
+	line-height: 50px
+	height: 50px
+	background: rgba(0, 0, 0, 0.2)
+	border-radius: 50px
+
+	font-family: Entypo
+	color: #fff
+	cursor: pointer
+
+	+transition(all 0.2s ease-out)
+
+	+noselect
+	&:hover
+		background: rgba(0, 0, 0, 0.5)
+
+.b-jumbotron--modified
+	padding-top: 0
+	background: none
+	height: auto
+	position: relative
+.b-jumbotron--modified__header
+	//padding-top: 40px
+	padding-bottom: 40px
+	position: absolute
+	width: 100%
+.jumbotron--modified__image
+	height: 735px
+	background: url(/etc/landing_pages/i/temp/jumbotron-image.jpg) 50% 0 no-repeat
+	background-size: auto 100%
+	.b-sample__format
+		max-height: 220px
+		height: 220px
+		line-height: 220px
+		padding-top: 230px
+		img
+			max-height: 220px
+			max-width: 90%
+.b-lead
+	background: #ebf3f7
+	padding-top: 35px
+	padding-bottom: 35px
+	text-align: center
+	.b-subheading
+		margin-bottom: 20px
+
+.b-slider
+	height: 230px
+	background: #ebf3f7
+	padding-top: 40px
+	position: relative
+	padding-bottom: 20px
+.b-slider .b-subheading
+	text-align: center
+	margin-bottom: 10px
+.b-slider__items
+	width: 100%
+	max-width: 960px
+	margin: 0 auto
+	height: 150px
+.b-slider__item
+	width: 250px
+	height: 160px
+	text-align: center
+	cursor: pointer
+	padding-top: 10px
+	+border-radius(4px)
+	img
+		display: inline-block
+	&.current
+		background: #d6dfe4
+	&:hover
+		.b-format__title
+			color: #9d228b
+		background: #ffffff
+.b-slider__nav__item
+	position: absolute
+	width: 50px
+	height: 50px
+	background: rgba(0, 0, 0, 0.2)
+	border-radius: 50px
+	top: 50%
+	margin-top: -25px
+	line-height: 50px
+	visibility: middle
+	text-align: center
+	font-family: Entypo
+	color: #fff
+	cursor: pointer
+	font-weight: 600
+	+transition(all 0.2s ease-out)
+	&:hover
+		background: rgba(0, 0, 0, 0.5)
+.b-slider__nav__item--prev
+	left: 35px
+.b-slider__nav__item--next
+	right: 35px
+
+.b-slider--modified
+	height: 160px
+	background: #ebf3f7
+	width: 100%
+	padding: 0
+	.b-slider__item
+		margin-top: 20px
+		height: 110px
+		.b-format__title
+			margin-top: 25px
+
+.b-format__image
+	height: 90px
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	margin-bottom: 8px
+.b-format__title
+	display: inline-block
+	font-size: 14px
+	border-bottom: 1px dashed
+	color: #7f8c8d
+	margin-bottom: 8px
+	+transition(all 0.2s ease-out)
+.b-format__price
+	font-size: 22px
+	font-weight: 600
+	color: #9d228b
+
+.b-sample
+	height: 615px
+	width: 100%
+
+	background-position: 50% 50%
+	background-image: url(/etc/landing_pages/i/temp/sample.jpg)
+	background-color: #fbfcfc
+	text-align: center
+.b-sample__format
+	height: 470px
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	vertical-align: middle
+	line-height: 470px
+
+	img
+		vertical-align: middle
+		max-width: 80%
+		@include box-shadow(0px 0px 8px rgba(0,0,0,.25))
+		line-height: 0
+		max-height: 320px
+		max-width: 90%
+
+.b-benefits
+	text-align: center
+
+	padding-top: 55px
+
+	height: 940px
+	width: 100%
+
+	font-size: 16px
+	color: #7f8c8d
+
+	.b-columns
+		width: 970px
+		margin: 0 auto
+
+.b-benefits__column--text
+	width: 212px
+	margin-top: 85px
+.b-benefits__column--image
+	width: 515px
+.b-benefits__benefit__wrap
+	height: 200px
+	margin-bottom: 12px
+.b-benefits__benefit
+	height: 200px
+	text-align: left
+	vertical-align: middle
+	line-height: 160%
+	display: table-cell
+.b-benefits__image
+	height: 580px
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-image: url(/etc/landing_pages/i/temp/benefits.jpg)
+	background-color: #fff
+
+.b-delivery
+	background: #ebf3f7
+	text-align: center
+	padding-top: 40px
+	margin-bottom: 50px
+.b-delivery__map
+	width: 100%
+	height: 520px
+.b-delivery__filters__wrap
+	width: 100%
+.b-delivery__filters__wrap--extended
+	background: rgba(235, 243, 247, .9)
+	position: absolute
+	margin-top: 1px
+	z-index: 50
+.b-delivery__filters
+	width: 940px
+	margin: 0 auto
+.b-delivery__filters--extended
+	padding-bottom: 30px
+	padding-top: 25px
+	display: none
+.b-delivery__filters__extend
+	font-size: 12px
+	color: #9d228b
+	padding-bottom: 18px
+	padding-top: 18px
+	span
+		cursor: pointer
+		border-bottom: 1px dashed
+		font-weight: 600
+		padding-bottom: 1px
+.b-delivery__select__wrap
+	background-image: url(/etc/landing_pages/i/delivery-select-bg.png)
+	background-position: 100% 50%
+	background-repeat: no-repeat
+	width: 230px
+	cursor: pointer
+	overflow: hidden
+	background-color: #fff
+	@include border-radius(4px)
+.b-delivery__filter
+	width: 33%
+	display: inline-block
+	vertical-align: top
+	text-align: left
+	select, input[type=text]
+		height: 50px
+		background: #fff
+		width: 230px
+		@include border-radius(4px)
+		color: #242531
+		font-size: 18px
+		border: none
+		appearance: none
+		-moz-appearance: none
+		-webkit-appearance: none
+		font-weight: 100
+		padding: 0 15px
+	//input[type=text]
+	//	width: 320px
+	select
+		cursor: pointer
+		//padding-top: 12px
+		background: transparent
+		@-moz-document url-prefix()
+			padding-top: 12px
+			width: 250px
+			color: rgba(0,0,0,0)
+			text-shadow: 0 0 0 #000
+		&:focus
+			outline: 0
+		::-moz-focus-inner
+			border: 0
+			outline: 0
+
+.b-delivery__filter__title
+	font-size: 12px
+	color: #727f86
+	font-weight: 600
+	margin-bottom: 7px
+	margin-left: 16px
+.b-delivery__filter__title--mobile
+	display: none
+
+.b-we
+	background: #fff
+	text-align: center
+.b-we--padded
+	padding-top: 40px
+.b-we__benefits
+	max-width: 940px
+	margin: 0 auto
+	margin-top: 50px
+.b-we__benefits__item
+	display: inline-block
+	width: 310px
+	vertical-align: top
+	margin-bottom: 50px
+.b-we__benefits__item__content
+	display: inline-block
+.b-we__benefits__item__icon
+	display: inline-block
+	text-align: center
+	width: 50px
+.b-we__benefits__item__title
+	font-size: 18px
+	color: #363f4c
+	text-align: left
+	margin-bottom: 20px
+	font-weight: 500
+	img
+		vertical-align: middle
+		margin-right: 3px
+.b-we__benefits__item__desc
+	margin-left: 50px
+	text-align: left
+	font-size: 14px
+	color: #586374
+	line-height: 160%
+
+.b-motivation
+	margin-top: 45px
+	padding-bottom: 20px
+	.b-heading, .b-subheading
+		text-align: center
+	.b-subheading
+		margin-bottom: 40px
+.b-motivation__list
+	text-align: center
+.b-motivation__item
+	width: 200px
+	vertical-align: top
+	display: inline-block
+	margin: 0 30px
+	text-align: left
+	margin-bottom: 40px
+	img
+		max-width: 100%
+		margin-bottom: 25px
+	p
+		font-size: 16px
+		color: #7f8c8d
+		line-height: 160%
+
+
+	// Footer blocks
++sticky-footer(225px, ".l-page", ".footer-buffer", ".l-footer")
+
+.b-footer
+	z-index: 100
+	background: url(/etc/landing_pages/i/footer-bg.png) no-repeat 50% 50% #4e5b62
+
+.b-footer__address
+	float: left
+.b-footer__copyrights
+	float: right
+	text-align: right
+
+// Popups
+.b-popup
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+
+	width: 100%
+	height: 100%
+
+	overflow: hidden
+	overflow-y: scroll
+
+	z-index: 1000
+	background: rgba(255, 255, 255, 0.85)
+
+.b-popup__content
+	position: relative
+
+	text-align: center
+
+	top: 100px
+	left: 50%
+
+	margin-left: -310px
+	width: 570px
+
+	+border-radius(10px)
+
+	padding-left: 46px
+	padding-top: 50px
+	padding-bottom: 30px
+	margin-bottom: 100px
+
+	@include border-radius(10px)
+	@include background-clip(padding-box)
+	background-color: #fff
+	@include box-shadow(0 0 10px rgba(0,0,0,.15))
+
+	font-size: 12px
+	color: #4d5a6d
+
+	a
+		color: #9d1e89
+		+link-animation
+
+	p
+		margin-bottom: 30px
+
+	.b-heading
+		font-size: 36px
+		margin-bottom: 20px
+	.b-subheading
+		margin-bottom: 35px
+		font-size: 16px
+	.b-subheading--popup
+		margin-bottom: -10px
+		margin-top: 40px
+
+.b-auth__login
+	background-color: #e4eaec
+	margin-left: -46px
+	padding-left: 46px
+	padding-right: 50px
+	margin-top: -50px
+	padding-top: 50px
+	+border-radius(10px 10px 0 0)
+	padding-bottom: 30px
+
+.b-auth__or
+	width: 31px
+	height: 31px
+	@include border-radius(16px)
+	background-color: #c5c9cf
+	text-align: center
+	line-height: 31px
+	vertical-align: middle
+	position: absolute
+	left: 50%
+	margin-left: -16px
+	margin-top: 14px
+.b-auth__params
+	width: 60%
+	float: left
+	height: 45px
+	line-height: 45px
+	text-align: left
+	margin-top: 10px
+	.b-checkbox
+		margin-left: 40px
+.b-auth__btn
+	margin-top: 10px
+	width: 40%
+	float: right
+	height: 45px
+	line-height: 45px
+	cursor: pointer
+	background: #9d228b
+	@include border-radius(5px)
+	font-size: 14px
+	position: relative
+	right: -5px
+	display: block
+	+transition(all 0.2s ease-out)
+	color: #fff !important
+	text-decoration: none
+
+	&:hover
+		opacity: .7
+
+.b-auth__social-buttons
+	margin-bottom: 25px
+	padding-top: 45px
+	padding-right: 46px
+.b-auth__social-buttons__note
+	padding-top: 20px
+	text-align: center
+.b-auth__social-buttons__button
+	cursor: pointer
+	width: 43.5%
+	display: inline-block
+	*display: inline
+	zoom: 1
+	font-size: 14px
+	+border-radius($site-radius)
+	margin-right: 10px
+	margin-bottom: 10px
+	height: 44px
+	line-height: 44px
+	vertical-align: middle
+	padding-left: 25px
+	+link-animation
+	-webkit-backface-visibility: hidden
+	backface-visibility: hidden
+	+clearfix
+	color: #fff
+	text-align: left
+	&:nth-child(2n)
+		margin-right: 0
+	&.b-auth__social-buttons__button--vk
+		background-color: #5c81a9
+	&.b-auth__social-buttons__button--ok
+		background-color: #ef7800
+	&.b-auth__social-buttons__button--fb
+		background-color: #3765a3
+	&.b-auth__social-buttons__button--mail
+		background-color: #004b88
+	&.b-auth__social-buttons__button--gplus
+		background-color: #cc3333
+	&.b-auth__social-buttons__button--ya
+		@include border-radius(5px)
+		@include background-clip(padding-box)
+		background-color: #f9f9f9
+		@include background-image(linear-gradient(bottom, rgba(0,0,0,.1) 0%, rgba(255,255,255,.1) 100%))
+.b-auth__social-buttons__button--small
+	width: 45px
+	height: 45px
+	padding-left: 0
+	line-height: 45px
+	vertical-align: middle
+	margin-right: 5px
+	margin-left: 5px
+	&:nth-child(2n)
+		margin-right: 5px
+		margin-left: 5px
+	.b-auth__social-buttons__button__icon
+		width: 45px
+		height: 45px
+		line-height: 45px
+		vertical-align: middle
+		margin-right: 0
+		background-position: 50% 50%
+		background-repeat: no-repeat
+.b-auth__social-buttons__button__icon
+	width: 40px
+	margin-right: 16px
+	height: 44px
+	line-height: 44px
+	vertical-align: middle
+	float: left
+	text-align: center
+	img
+		vertical-align: middle
+
+.b-popup__close
+	width: 23px
+	height: 23px
+	background: url(/etc/landing_pages/i/popup-close.png) no-repeat
+	position: absolute
+	right: -40px
+	top: 0px
+	cursor: pointer
+
+.b-row
+	margin-bottom: 12px
+	+clearfix
+
+.b-input
+	width: 93%
+	//width: calc(100% - 40px)
+	height: 45px
+	border: 1px solid #cdd5d9
+	@include border-radius(6px)
+	font-size: 14px
+	color: #4d5a6d
+	padding: 0 20px
+.b-checkbox
+	cursor: pointer
+.b-checkbox__custom
+	width: 20px
+	height: 20px
+	+border-radius(3px)
+	background: #fff
+	border: 1px solid rgba(77,90,109,.15)
+	margin-right: 6px
+	vertical-align: middle
+	line-height: 20px
+	text-align: center
+	position: relative
+	top: -2px
+	display: none
+	&.show
+		display: inline-block
+		*display: inline
+		zoom: 1
+.b-checkbox__input.hide
+	display: none
+
+.b-popups__frame
+	position: fixed
+	height: 100%
+	width: 100%
+	top: 0
+	left: 0
+
+	z-index: 1000
+	overflow: hidden
+
+	display: none
+
+iframe, object, embed
+	max-width: 100%
+
+.b-auth__credentials--amnesia
+	padding-bottom: 0
+	margin-bottom: 0
+	border-bottom: 0
+	padding-right: 46px
+.b-auth__btn--amnesia
+	margin: 0 auto
+	right: 0
+	float: none
+
+.b-popup--login-modified
+	.b-popup__content
+		width: 570px + 46px
+		padding-left: 0
+	.b-subheading
+		font-size: 20px
+		margin-top: 10px
+		margin-bottom: -15px
+	.b-auth__social-buttons
+		padding-right: 0
+.b-auth__actions
+	margin-top: 10px
+	margin-bottom: 30px
+.b-auth__credentials--register
+	padding: 0 46px
+	margin-top: 40px
+	padding-bottom: 20px
+	.b-input--small
+		width: 255px
+		margin-right: 15px
+		margin-top: 10px
+.b-auth__credentials__misc
+	margin-top: 30px
+	
+.b-slider__nav
+	margin: -70px auto 0
+	max-width: 1200px !important
+	position: relative
